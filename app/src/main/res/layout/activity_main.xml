@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Vue de l'activité principale de l'application MemoriseMot
+     fichier activity_main.xml                                  07/18
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- message d'introduction -->
+    <TextView
+        style="@style/TitreActivite"
+        android:text="@string/message_principal" />
+
+    <!-- bouton pour lancer le choix aléatoire des mots -->
+    <Button
+        style="@style/StyleBoutonCentre"
+        android:text="@string/btn_5mots"
+        android:onClick="clic5mots"/>
+
+    <!-- barre horizontale de séparation -->
+    <View
+        style="@style/BarreSeparation"/>
+
+    <!-- 5 TextView pour les 5 mots tirés au sort -->
+    <TextView
+        android:id="@+id/mot1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_gravity="left" />
+
+    <TextView
+        android:id="@+id/mot2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_gravity="left" />
+
+    <TextView
+        android:id="@+id/mot3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_gravity="left" />
+
+    <TextView
+        android:id="@+id/mot4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_gravity="left" />
+
+    <TextView
+        android:id="@+id/mot5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_gravity="left" />
+
+    <!-- barre horizontale de séparation -->
+    <View
+        style="@style/BarreSeparation"/>
+
+    <!-- boutons raz et jouer -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            style="@style/StyleBouton"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/btn_raz"
+            android:onClick="clicRaz"/>
+
+        <Button
+            style="@style/StyleBouton"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="@string/btn_jouer"
+            android:onClick="clicJouer"/>
+
+    </LinearLayout>
+</LinearLayout>

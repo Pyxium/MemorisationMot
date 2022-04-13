@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="taille_titre">22sp</dimen>
+
+    <dimen name="tres_grande_marge">40dp</dimen>
+    <dimen name="petite_marge">10dp</dimen>
+    <dimen name="marge_moyenne">12dp</dimen>
+    <dimen name="hauteur_barre">3dp</dimen>
+
+</resources>

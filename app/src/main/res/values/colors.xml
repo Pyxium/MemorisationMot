@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <!-- couleurs spécifiques de l'application -->
+    <color name="fond_bouton">#e8af5c </color>
+    <color name="titre_activite">#e85c5c</color>
+    <color name="phrase_resultat">#F08080</color>
+    <color name="barre">#F08080</color>
+</resources>

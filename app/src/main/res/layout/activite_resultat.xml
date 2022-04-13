@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- vue de l'activité lancée si l'utilisateur perd
+     On affiche la liste des mots proposés par l'utilisateur et la liste des mots
+     qu'il fallait retrouver
+     fichier ActiviteProposition.xml -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context=".ActiviteResultat">
+
+    <!-- message d'introduction -->
+    <TextView
+        style="@style/TitreActivite"
+        android:id="@+id/nom_activite_resultat"
+        android:text="@string/message_perdu1" />
+
+    <TextView
+        style="@style/StyleTexte"
+        android:id="@+id/texte_combien"
+        android:text="@string/message_perdu1bis" />
+
+    <!-- barre horizontale de séparation -->
+    <View
+        style="@style/BarreSeparation"/>
+
+    <!-- RAPPEL DES MOTS PROPOSES PAR L'UTILISATEUR -->
+    <!-- ****************************************** -->
+
+    <!-- message précisant qu'il s'agit des mots proposés -->
+    <TextView
+        style="@style/StyleTexte"
+        android:text="@string/message_perdu2" />
+
+    <!-- 5 lignes pour afficher les 5 mots -->
+    <!-- ligne 1 -->
+    <TextView
+        android:id="@+id/proposition1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin" />
+
+    <!-- ligne 2-->
+    <TextView
+        android:id="@+id/proposition2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin" />
+
+    <!-- ligne 3-->
+    <TextView
+        android:id="@+id/proposition3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin" />
+
+    <!-- ligne 4-->
+    <TextView
+        android:id="@+id/proposition4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin" />
+
+    <!-- ligne 5-->
+    <TextView
+        android:id="@+id/proposition5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin" />
+
+    <!-- barre horizontale de séparation -->
+    <View
+        style="@style/BarreSeparation"/>
+
+
+    <!-- MOTS CONSTITUANT LA BONNE REPONSE -->
+    <!-- ********************************* -->
+
+    <!-- message précisant qu'il s'agit des mots justes -->
+    <TextView
+        style="@style/StyleTexte"
+        android:text="@string/message_perdu3" />
+
+    <!-- 5 lignes pour afficher les 5 mots bonne réponse-->
+    <!-- ligne 1 -->
+    <TextView
+        android:id="@+id/motok1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin" />
+
+    <!-- ligne 2-->
+    <TextView
+        android:id="@+id/motok2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin" />
+
+    <!-- ligne 3-->
+    <TextView
+        android:id="@+id/motok3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin" />
+
+    <!-- ligne 4-->
+    <TextView
+        android:id="@+id/motok4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin" />
+
+    <!-- ligne 5-->
+    <TextView
+        android:id="@+id/motok5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin" />
+
+    <!-- barre horizontale de séparation -->
+    <View
+        style="@style/BarreSeparation"/>
+
+    <!-- bouton pour soumettre les 5 propositions -->
+    <Button
+        style="@style/StyleBoutonCentre"
+        android:text="@string/btn_rejouer"
+        android:onClick="clicRejouer"/>
+
+</LinearLayout>
+

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- vue de l'activité dans laquelle l'utilisateur doit proposer 5 mots
+     qu'il a mémorisé
+     fichier ActiviteProposition.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context=".ActiviteProposition">
+
+    <!-- message d'introduction -->
+    <TextView
+        style="@style/TitreActivite"
+        android:text="@string/message_proposition" />
+
+
+    <!-- barre horizontale de séparation -->
+    <View
+        style="@style/BarreSeparation"/>
+
+    <!-- 5 lignes avec un TextView et un EditText -->
+    <!-- ligne 1-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/StyleEtiquetteMot"
+            android:text="@string/libelle_mot" />
+
+        <EditText
+            android:id="@+id/saisie_mot1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:inputType="text|textCapCharacters"
+            android:layout_weight="2"/>
+    </LinearLayout>
+
+    <!-- ligne 2-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/StyleEtiquetteMot"
+            android:text="@string/libelle_mot" />
+
+        <EditText
+            android:id="@+id/saisie_mot2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_weight="2"/>
+    </LinearLayout>
+
+    <!-- ligne 3-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/StyleEtiquetteMot"
+            android:text="@string/libelle_mot" />
+
+        <EditText
+            android:id="@+id/saisie_mot3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_weight="2"/>
+    </LinearLayout>
+
+    <!-- ligne 4-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/StyleEtiquetteMot"
+            android:text="@string/libelle_mot" />
+
+        <EditText
+            android:id="@+id/saisie_mot4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_weight="2"/>
+    </LinearLayout>
+
+    <!-- ligne 5-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/StyleEtiquetteMot"
+            android:text="@string/libelle_mot" />
+
+        <EditText
+            android:id="@+id/saisie_mot5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_weight="2"/>
+    </LinearLayout>
+
+
+    <!-- barre horizontale de séparation -->
+    <View
+        style="@style/BarreSeparation"/>
+
+    <!-- bouton pour soumettre les 5 propositions -->
+    <Button
+        style="@style/StyleBoutonCentre"
+        android:text="@string/btn_soumettre"
+        android:onClick="clicSoumettre"/>
+
+</LinearLayout>

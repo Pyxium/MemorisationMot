@@ -1,0 +1,79 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+      <!-- Style des titres des activités -->
+    <style name="TitreActivite" >
+        <item name="android:textColor">@color/titre_activite</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/taille_titre</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginTop">@dimen/activity_vertical_margin</item>
+        <item name="android:layout_marginBottom">@dimen/activity_vertical_margin</item>
+    </style>
+
+    <!-- Style de la barre de séparation-->
+    <style name="BarreSeparation" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/hauteur_barre</item>
+        <item name="android:layout_marginTop">@dimen/petite_marge</item>
+        <item name="android:layout_marginBottom">@dimen/petite_marge</item>
+
+        <item name="android:background">@color/barre</item>
+    </style>
+
+    <!-- Style des boutons-->
+    <style name="StyleBouton" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">@color/fond_bouton</item>
+    </style>
+
+    <style name="StyleBoutonCentre"  parent = "StyleBouton">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginTop">@dimen/activity_vertical_margin</item>
+    </style>
+
+
+    <!-- Style des textes -->
+    <style name="StyleTexte" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginTop">@dimen/marge_moyenne</item>
+        <item name="android:textColor">@color/phrase_resultat</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Style des phrases de sous-titre -->
+    <style name="StyleTexteSousTitre" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginTop">@dimen/activity_vertical_margin</item>
+        <item name="android:textColor">@color/titre_activite</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Style des étiquettes avec numéro de mot -->
+    <style name="StyleEtiquetteMot" >
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/titre_activite</item>
+    </style>
+
+
+
+</resources>

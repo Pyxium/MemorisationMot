@@ -1,0 +1,28 @@
+<!-- ressources de l'application MemorisationMot -->
+<resources>
+    <string name="app_name">MemorisationMot</string>
+
+    <!-- texte de l'activité principale -->
+    <string name="message_principal">Entrainez votre mémoire !</string>
+    <string name="btn_5mots">Générer 5 mots</string>
+    <string name="btn_raz">RAZ</string>
+    <string name="btn_jouer">JOUER</string>
+    <string name="erreur">Vous devez d\'abord générer 5 mots !</string>
+
+    <!-- texte de l'activité propositions -->
+    <string name="message_proposition">Vos propositions</string>
+    <string name="libelle_mot">Mot</string>
+    <string name="btn_soumettre">Soumettre</string>
+
+    <!-- texte du toast gagné -->
+    <string name="message_gagne1">Bravo !</string>
+    <string name="message_gagne2">Vous avez retrouvé les 5 mots ! </string>
+
+    <!-- texte de l'activité perdu -->
+    <string name="message_perdu1">Perdu !</string>
+    <string name="message_perdu1bis">Vous avez retrouvé %d mot(s) seulement !</string>
+    <string name="message_perdu2">Vous avez proposé :</string>
+    <string name="message_perdu3">Il fallait trouver :</string>
+    <string name="btn_rejouer">Rejouer</string>
+
+</resources>
