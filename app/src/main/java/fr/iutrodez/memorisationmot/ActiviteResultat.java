@@ -70,8 +70,6 @@ public class ActiviteResultat extends Activity {
         zoneMotCorrect[2] = findViewById(R.id.motok3);
         zoneMotCorrect[3] = findViewById(R.id.motok4);
         zoneMotCorrect[4] = findViewById(R.id.motok5);
-        etiqCombienTrouve = findViewById(R.id.texte_combien);
-
 
         // on récupère l'intention à l'origine de l'activité
         Intent intentionRecu = getIntent();
