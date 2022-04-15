@@ -18,22 +18,31 @@ import java.util.ArrayList;
  * 5 mots. Il doit ensuite cliquer sur le bouton "soumettre" pour savoir si sa
  * réponse est correcte ou pas. Si elle est correcte un message toast s'affihe.
  * Sinon une nouvelle activité "ActivitePerdu" est créée.
+ *
  * @author Servieres
  * @version 1.0
  */
 public class ActiviteProposition extends Activity {
 
-    /** Clé pour le tableau des mots proposés par l'utilisteur */
+    /**
+     * Clé pour le tableau des mots proposés par l'utilisteur
+     */
     public static final String CLE_MOT_UTILISATEUR
             = "fr.iutrodez.memorisationmott.MOT_UTILISATEUR";
 
-    /** Zone de saisie pour les mots proposés par l'utilisateur */
+    /**
+     * Zone de saisie pour les mots proposés par l'utilisateur
+     */
     private EditText[] tableZoneSaisie;
 
-    /** Liste des mots corrects */
+    /**
+     * Liste des mots corrects
+     */
     private ArrayList<String> listeCorrecte;
 
-    /** Liste des mots proposés par l'utilisateur */
+    /**
+     * Liste des mots proposés par l'utilisateur
+     */
     private ArrayList<String> reponseUtilisateur;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,22 +51,22 @@ public class ActiviteProposition extends Activity {
 
         // on accède aux zones de saisie des mots
         tableZoneSaisie = new EditText[MainActivity.NB_MOT];
-        tableZoneSaisie[0] =  findViewById(R.id.saisie_mot1);
-        tableZoneSaisie[1] =  findViewById(R.id.saisie_mot2);
-        tableZoneSaisie[2] =  findViewById(R.id.saisie_mot3);
-        tableZoneSaisie[3] =  findViewById(R.id.saisie_mot4);
-        tableZoneSaisie[4] =  findViewById(R.id.saisie_mot5);
+        tableZoneSaisie[0] = findViewById(R.id.saisie_mot1);
+        tableZoneSaisie[1] = findViewById(R.id.saisie_mot2);
+        tableZoneSaisie[2] = findViewById(R.id.saisie_mot3);
+        tableZoneSaisie[3] = findViewById(R.id.saisie_mot4);
+        tableZoneSaisie[4] = findViewById(R.id.saisie_mot5);
 
         //Récupératoin de la liste correcte transmise par l'activité parente
         Intent intentionRecu = getIntent();
 
         listeCorrecte = intentionRecu.getStringArrayListExtra(MainActivity.CLE_MOT_CORRECT);
-
     }
 
     /**
      * Méthode appelée lorsque l'utilisateur clique sur le bouton "Soumettre"
-     * @param bouton  bouton sur lequel l'utilisateur a cliqué
+     *
+     * @param bouton bouton sur lequel l'utilisateur a cliqué
      */
     public void clicSoumettre(View bouton) {
 

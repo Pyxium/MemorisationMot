@@ -13,7 +13,6 @@ import android.view.View;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import static fr.iutrodez.memorisationmot.BaseDeMot.combienEnCommun;
 import static fr.iutrodez.memorisationmot.BaseDeMot.identique;
@@ -22,20 +21,29 @@ import static fr.iutrodez.memorisationmot.BaseDeMot.identique;
  * Cette classe gère l'activité qui informe l'utilisateur qu'il a perdu.
  * Elle affiche la liste des mots proposés par l'utilisateur ainsi que la liste
  * des mots corrects.
+ *
  * @author Servières
  * @version 1.0
  */
 public class ActiviteResultat extends Activity {
-    /** Etiquette du titre de l'activité */
+    /**
+     * Etiquette du titre de l'activité
+     */
     private TextView etiqTitreActivite;
 
-    /** Zone de texte pour afficher les mots proposés par l'utilisateur */
+    /**
+     * Zone de texte pour afficher les mots proposés par l'utilisateur
+     */
     private TextView[] zoneMotUtilisateur;
 
-    /** Zone de texte pour afficher les mots corrects qu'il fallait retrouver */
+    /**
+     * Zone de texte pour afficher les mots corrects qu'il fallait retrouver
+     */
     private TextView[] zoneMotCorrect;
 
-    /** Zone pour afficher combien de mots l'utilisateur a effectivement retrouvé */
+    /**
+     * Zone pour afficher combien de mots l'utilisateur a effectivement retrouvé
+     */
     private TextView etiqCombienTrouve;
 
     @Override
@@ -49,28 +57,30 @@ public class ActiviteResultat extends Activity {
 
         // accès sur les zones d'affichage des mots utilisateur
         zoneMotUtilisateur = new TextView[MainActivity.NB_MOT];
-        zoneMotUtilisateur[0] =  findViewById(R.id.proposition1);
-        zoneMotUtilisateur[1] =  findViewById(R.id.proposition2);
+        zoneMotUtilisateur[0] = findViewById(R.id.proposition1);
+        zoneMotUtilisateur[1] = findViewById(R.id.proposition2);
         zoneMotUtilisateur[2] = findViewById(R.id.proposition3);
-        zoneMotUtilisateur[3] =  findViewById(R.id.proposition4);
-        zoneMotUtilisateur[4] =  findViewById(R.id.proposition5);
+        zoneMotUtilisateur[3] = findViewById(R.id.proposition4);
+        zoneMotUtilisateur[4] = findViewById(R.id.proposition5);
 
         // accès sur les zones d'affichage des mots corrects et des résultats
         zoneMotCorrect = new TextView[MainActivity.NB_MOT];
-        zoneMotCorrect[0] =  findViewById(R.id.motok1);
+        zoneMotCorrect[0] = findViewById(R.id.motok1);
         zoneMotCorrect[1] = findViewById(R.id.motok2);
         zoneMotCorrect[2] = findViewById(R.id.motok3);
-        zoneMotCorrect[3] =  findViewById(R.id.motok4);
+        zoneMotCorrect[3] = findViewById(R.id.motok4);
         zoneMotCorrect[4] = findViewById(R.id.motok5);
-        etiqCombienTrouve =  findViewById(R.id.texte_combien);
+        etiqCombienTrouve = findViewById(R.id.texte_combien);
 
 
         // on récupère l'intention à l'origine de l'activité
         Intent intentionRecu = getIntent();
 
         // on récupère les tableaux de mots contenus dans l'intention
-        ArrayList<String> listeAlea = intentionRecu.getStringArrayListExtra(MainActivity.CLE_MOT_CORRECT);
-        ArrayList<String> listeJoueur = intentionRecu.getStringArrayListExtra(ActiviteProposition.CLE_MOT_UTILISATEUR);
+        ArrayList<String> listeAlea = intentionRecu
+                .getStringArrayListExtra(MainActivity.CLE_MOT_CORRECT);
+        ArrayList<String> listeJoueur = intentionRecu
+                .getStringArrayListExtra(ActiviteProposition.CLE_MOT_UTILISATEUR);
 
         // on place les mots dans les zones d'affichage
         for (int indice = 0; indice < listeAlea.size(); indice++) {
@@ -96,7 +106,8 @@ public class ActiviteResultat extends Activity {
     /**
      * Méthode invoquée lorsque l'utilisateur clique sur "Rejouer".
      * L'activité principale de l'application est relancée.
-     * @param bouton    bouton sur lequel l'utilisateur a cliqué
+     *
+     * @param bouton bouton sur lequel l'utilisateur a cliqué
      */
     public void clicRejouer(View bouton) {
         Intent mainActivity =
