@@ -7,9 +7,16 @@ package fr.iutrodez.memorisationmot;
 
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static fr.iutrodez.memorisationmot.BaseDeMot.combienEnCommun;
+import static fr.iutrodez.memorisationmot.BaseDeMot.identique;
 
 /**
  * Cette classe gère l'activité qui informe l'utilisateur qu'il a perdu.
@@ -36,6 +43,10 @@ public class ActiviteResultat extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activite_resultat);
 
+        // Accès au titre de l'activité et la légende associée
+        etiqTitreActivite = findViewById(R.id.nom_activite_resultat);
+        etiqCombienTrouve = findViewById(R.id.texte_combien);
+
         // accès sur les zones d'affichage des mots utilisateur
         zoneMotUtilisateur = new TextView[MainActivity.NB_MOT];
         zoneMotUtilisateur[0] =  findViewById(R.id.proposition1);
@@ -55,16 +66,30 @@ public class ActiviteResultat extends Activity {
 
 
         // on récupère l'intention à l'origine de l'activité
-        // TODO
+        Intent intentionRecu = getIntent();
 
         // on récupère les tableaux de mots contenus dans l'intention
-        // TODO
+        ArrayList<String> listeAlea = intentionRecu.getStringArrayListExtra(MainActivity.CLE_MOT_CORRECT);
+        ArrayList<String> listeJoueur = intentionRecu.getStringArrayListExtra(ActiviteProposition.CLE_MOT_UTILISATEUR);
 
         // on place les mots dans les zones d'affichage
-        // TODO
+        for (int indice = 0; indice < listeAlea.size(); indice++) {
+            zoneMotCorrect[indice].setText(listeAlea.get(indice));
+        }
+
+        for (int indice = 0; indice < listeJoueur.size(); indice++) {
+            zoneMotUtilisateur[indice].setText(listeJoueur.get(indice));
+        }
 
         // on modifie les textes affichés selon que le joueur a gagné ou pas
-        // TODO
+        if (identique(listeAlea, listeJoueur)) {
+            etiqTitreActivite.setText(R.string.message_gagne1);
+            etiqCombienTrouve.setText(R.string.message_gagne2);
+        } else {
+            etiqTitreActivite.setText(R.string.message_perdu1);
+            etiqCombienTrouve.setText(getString(R.string.message_perdu1bis
+                    , combienEnCommun(listeAlea, listeJoueur)));
+        }
 
     }
 
@@ -74,8 +99,9 @@ public class ActiviteResultat extends Activity {
      * @param bouton    bouton sur lequel l'utilisateur a cliqué
      */
     public void clicRejouer(View bouton) {
-
-        // TODO
+        Intent mainActivity =
+                new Intent(ActiviteResultat.this, MainActivity.class);
+        startActivity(mainActivity);
     }
 
 }
