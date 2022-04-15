@@ -6,6 +6,7 @@
 package fr.iutrodez.memorisationmot;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -24,7 +25,7 @@ public class ActiviteProposition extends Activity {
 
     /** Clé pour le tableau des mots proposés par l'utilisteur */
     public static final String CLE_MOT_UTILISATEUR
-            = "com.multiactivite.exercice.android.memorisemot.MOT_UTILISATEUR";
+            = "fr.iutrodez.memorisationmott.MOT_UTILISATEUR";
 
     /** Zone de saisie pour les mots proposés par l'utilisateur */
     private EditText[] tableZoneSaisie;
@@ -47,6 +48,11 @@ public class ActiviteProposition extends Activity {
         tableZoneSaisie[3] =  findViewById(R.id.saisie_mot4);
         tableZoneSaisie[4] =  findViewById(R.id.saisie_mot5);
 
+        //Récupératoin de la liste correcte transmise par l'activité parente
+        Intent intentionRecu = getIntent();
+
+        listeCorrecte = intentionRecu.getStringArrayListExtra(MainActivity.CLE_MOT_CORRECT);
+
     }
 
     /**
@@ -57,7 +63,9 @@ public class ActiviteProposition extends Activity {
 
         // on constitue la liste des mots saisis par l'utilistateur
         reponseUtilisateur = new ArrayList<>();
-        // TODO
+        for (int indice = 0; indice < tableZoneSaisie.length; indice++) {
+            reponseUtilisateur.add(tableZoneSaisie[indice].getText().toString());
+        }
 
         // on compare la proposition de l'utilisateur et la réponse correcte
         // TODO

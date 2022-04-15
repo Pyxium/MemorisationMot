@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     /** Clé pour le tableau des mots corrects transmis à l'activité fille "propositions" */
     public static final String CLE_MOT_CORRECT
-            = "com.multiactivite.exercice.android.memorisemot.MOT_CORRECT";
+            = "fr.iutrodez.memorisationmot.MOT_CORRECT";
 
     /** Tableau contenant les références sur les zones d'affichage
      *  des mots
@@ -73,12 +73,13 @@ public class MainActivity extends AppCompatActivity {
     public void clic5mots(View bouton) {
 
         // tirage aléatoire de 5 mots
-        // TODO
+        listeMotTire = base.tirageAleatoire();
 
         // on place les 5 mots dans les TextView
-        // TODO
-		
-		
+        for (int indice = 0; indice < listeMotTire.size(); indice++) {
+            tableTexteMot[indice].setText(listeMotTire.get(indice));
+        }
+
         clicSur5Mots = true;
     }
 
@@ -88,7 +89,9 @@ public class MainActivity extends AppCompatActivity {
      * @param bouton  bouton sur lequel le clic a été effectué
      */
     public void clicRaz(View bouton) {
-        // TODO
+        for (TextView raz : tableTexteMot) {
+            raz.setText(null);
+        }
     }
 
 
@@ -101,15 +104,20 @@ public class MainActivity extends AppCompatActivity {
         if ( ! clicSur5Mots) {
 
             // l'utilisateur n'a pas lancé le tirage des 5 mots
-            // TODO
+            Toast.makeText(this, R.string.messageToast, Toast.LENGTH_LONG)
+                    .show();
 			
         } else {
             clicRaz(bouton);    // on vide les mots
-
             /* Création d'une intention qui sera envoyée à l'activité "proposition"
              * accompagnée d'un tableau contenant les 5 mots proposés à l'utilisateur
              */
-            // TODO
+            Intent activiteProposition =
+                    new Intent(MainActivity.this, ActiviteProposition.class);
+
+            activiteProposition.putExtra(CLE_MOT_CORRECT, listeMotTire);
+
+            startActivity(activiteProposition);
         }
     }
 

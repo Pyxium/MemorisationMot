@@ -24,5 +24,6 @@
     <string name="message_perdu2">Vous avez proposé :</string>
     <string name="message_perdu3">Il fallait trouver :</string>
     <string name="btn_rejouer">Rejouer</string>
+    <string name="messageToast">Cliquez d\'abord sur \"Générer 5 mots\" avant de commencer le jeu</string>
 
 </resources>
