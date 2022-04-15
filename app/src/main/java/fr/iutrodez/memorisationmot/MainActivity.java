@@ -2,7 +2,7 @@
  * TP multiactivités : jeu mémorisation des mots => activité principale
  * MainActivity.java                    07/16
  */
-package memorisationmot.android.exercice.multiactivite.com.memorisationmot;
+package fr.iutrodez.memorisationmot;
 
 import android.os.Bundle;
 import android.content.Intent;

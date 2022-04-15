@@ -2,7 +2,7 @@
  * Classe outil pour gérer une liste de mots dans laquelle un tirage aléatoire sera fait
  * BaseDeMot.java
  */
-package memorisationmot.android.exercice.multiactivite.com.memorisationmot;
+package fr.iutrodez.memorisationmot;
 
 import java.util.ArrayList;
 import java.util.Arrays;
