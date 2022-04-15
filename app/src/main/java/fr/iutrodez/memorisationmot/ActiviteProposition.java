@@ -67,14 +67,17 @@ public class ActiviteProposition extends Activity {
             reponseUtilisateur.add(tableZoneSaisie[indice].getText().toString());
         }
 
-        // on compare la proposition de l'utilisateur et la réponse correcte
-        // TODO
-
         /* Création d'une intention qui sera envoyée à l'activité "resultat"
          * accompagnée d'un tableau contenant les 5 mots corrects et les 5 mots
          * proposés par l'utilisateur
          */
-        // TODO
+        Intent activiteResultat =
+                new Intent(ActiviteProposition.this, ActiviteResultat.class);
+
+        activiteResultat.putExtra(MainActivity.CLE_MOT_CORRECT, listeCorrecte);
+        activiteResultat.putExtra(CLE_MOT_UTILISATEUR, reponseUtilisateur);
+
+        startActivity(activiteResultat);
     }
 
 }
